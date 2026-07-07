@@ -1,4 +1,4 @@
-IMPORT { useState } from 'react'
+import{ useState } from 'react'
 import Herosection from './Herosection.jsx'
 
 function App() {
