@@ -14,9 +14,9 @@ function Herosection(){
 
 
             <div className="main-box" >
-                <div className="card1"></div>
-                <div className="card2"></div>
-                <div className="card3"></div>
+                <div className="cards" id="card1"></div>
+                <div className="cards" id="card2"></div>
+                <div className="cards" id="card3"></div>
                 
 
             </div>
