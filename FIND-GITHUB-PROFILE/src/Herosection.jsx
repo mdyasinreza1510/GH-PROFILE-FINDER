@@ -1,3 +1,4 @@
+import "./Herosection.css"
 function Herosection(){
 
     return(
@@ -9,13 +10,13 @@ function Herosection(){
             <div className="input-box">
                 <input type="text" placeholder="Enter username"/> 
                 <button>SEARCH</button>
-
-
-
-
-
             </div>
+
+
             <div className="main-box" >
+                <div className="card1"></div>
+                <div className="card2"></div>
+                <div className="card3"></div>
                 
 
             </div>

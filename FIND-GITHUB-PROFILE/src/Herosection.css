@@ -1,0 +1,8 @@
+.input-box{
+    border: 2px solid black;
+    height: 60px;
+}
+.main-box{
+    border: 2px solid red;
+    height: 500px;
+}
