@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Herosection.css"
 function Herosection(){
+    let base_url="https://api.github.com/users/"
     const [username,setusername]=useState("");
     const [userdata,setuserdata]=useState(null);
     const[loading,setloading]=useState(false);
@@ -9,9 +10,10 @@ function Herosection(){
     function usernamechange(event){
         setusername(event.target.value)
     }
-    function display(){
-        console.log("username:",username);
-        
+    const display = async()=>{
+        const response= await fetch(`${base_url}${username}`);
+        const data= await response.json();
+        console.log(data);
     }
 
     return(
@@ -29,7 +31,7 @@ function Herosection(){
             <div className="main-box" >
                 <div className="cards" id="left">
                     <div className="pfp"></div>
-                    <span>USERNAME</span>
+                    <span>username</span>
                     <span>ABOUT</span>
                     <div className="details">my details</div>
                     <button>vuew on github</button>
