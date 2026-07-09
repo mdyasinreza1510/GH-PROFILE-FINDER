@@ -13,7 +13,8 @@ function Herosection(){
     const display = async()=>{
         const response= await fetch(`${base_url}${username}`);
         const data= await response.json();
-        console.log(data);
+        console.log (data);
+        setuserdata(data);
     }
 
     return(
@@ -30,11 +31,13 @@ function Herosection(){
 
             <div className="main-box" >
                 <div className="cards" id="left">
-                    <div className="pfp"></div>
-                    <span>username</span>
-                    <span>ABOUT</span>
+                    <div className="pfp"><img src={userdata?.avatar_url} alt="pfp" /></div>
+
+                    <span>@{userdata?.login}</span>
+
+                    <span>{userdata?.bio}</span>
                     <div className="details">my details</div>
-                    <button>vuew on github</button>
+                    <span><a href={userdata?.html_url} target="_blank">view on github</a></span>
                 </div>
 
 
