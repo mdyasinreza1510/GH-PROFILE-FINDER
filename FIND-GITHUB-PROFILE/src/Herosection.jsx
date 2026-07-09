@@ -14,7 +14,13 @@ function Herosection(){
 
 
             <div className="main-box" >
-                <div className="cards" id="left"></div>
+                <div className="cards" id="left">
+                    <div className="pfp"></div>
+                    <span>USERNAME</span>
+                    <span>ABOUT</span>
+                    <div className="details"></div>
+                    <button>vuew on github</button>
+                </div>
                 <div className="cards" id="right">
                     <div className="b1"></div>
                     <div className="b2"></div>
