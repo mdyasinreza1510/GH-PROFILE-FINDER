@@ -6,6 +6,14 @@ function Herosection(){
     const[loading,setloading]=useState(false);
     const[error,seterror]=useState("");
 
+    function usernamechange(event){
+        setusername(event.target.value)
+    }
+    function display(){
+        console.log("username:",username);
+        
+    }
+
     return(
         <>
         <section className="homepage">
@@ -13,8 +21,8 @@ function Herosection(){
 
             
             <div className="input-box">
-                <input type="text" placeholder="Enter username"/> 
-                <button>SEARCH</button>
+                <input onChange={usernamechange} type="text" placeholder="Enter username" value={username}/> 
+                <button onClick={display}>SEARCH</button>
             </div>
 
 
