@@ -1,5 +1,10 @@
+import { useState } from "react";
 import "./Herosection.css"
 function Herosection(){
+    const [username,setusername]=useState("");
+    const [userdata,setuserdata]=useState(null);
+    const[loading,setloading]=useState(false);
+    const[error,seterror]=useState("");
 
     return(
         <>
@@ -18,7 +23,7 @@ function Herosection(){
                     <div className="pfp"></div>
                     <span>USERNAME</span>
                     <span>ABOUT</span>
-                    <div className="details"></div>
+                    <div className="details">my details</div>
                     <button>vuew on github</button>
                 </div>
 
