@@ -9,7 +9,7 @@ function Herosection() {
     const [popup,setpopup]=useState(false);
     const clearref=useRef(null);
 
-    
+
     function usernamechange(event) {
         setusername(event.target.value)
     }
@@ -21,13 +21,15 @@ function close(){
 
 function clear(){
     clearref.current.value="";
+    setusername(event.target.value)
 }
 
     const display = async () => {
 
         if (username == "") {
-            seterror("please enter a github username");
+            seterror("enter a github username !!");
             setpopup(true)
+           
             return;
         }
         setloading(true);
@@ -40,6 +42,7 @@ function clear(){
 
         if (response.status === 404) {
             seterror("user ot found");
+            setusername("");
             setpopup(true);
             setuserdata(null);
             setloading(false);
@@ -60,8 +63,8 @@ function clear(){
 
                {popup && <div className="overlay">
                     <div className="user-msg">
-                        <p>{error}</p>
-                        <button onClick={close}>close</button>
+                        <p >{error}</p>
+                        <button className="close-btn" onClick={close}>close</button>
                     </div>
 
                 </div> } 

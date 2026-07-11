@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+}
+body{
+    background-color: #132440;
 }
 .overlay{
     background-color: transparent;
@@ -15,20 +19,39 @@
     z-index: 1;
 }
 .user-msg{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-size:30px;
-    color: black;
+    border-radius: 20px;
+    gap: 20px;
+    font-size:16px;
+    color: white;
+    font-weight: 600;
+    font-family: Verdana;
     height: 150px;
-    width: 300px;
-    background-color: blue;
+    width: 350px;
+    background-color: #16476A;
+}
+.close-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: #BF092F;
+    font-weight: 550;
+    width: 140px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: Verdana;
+
 }
 
 .input-box {
-    border: 2px solid black;
+    border: 2px solid white;
     height: 60px;
 }
 
@@ -46,7 +69,7 @@
 #left {
     height: 100%;
     width: 20%;
-    border: 2px solid black;
+    border: 2px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,11 +104,11 @@
 }
 
 .b1 {
-    border: 2px solid black;
+    border: 2px solid white;
     height: 60px;
 }
 
 .b2 {
     height: 100%;
-    border: 2px solid black;
+    border: 2px solid white;
 }
