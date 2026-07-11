@@ -11,17 +11,31 @@ function Herosection() {
         setusername(event.target.value)
     }
     const display = async () => {
+
         if (username == "") {
             seterror("please enter a github username");
+            return;
         }
-        else {
-            setloading(true);
-            const response = await fetch(`${base_url}${username}`);
-            const data = await response.json();
+        setloading(true);
+        seterror("");
+
+
+        const response = await fetch(`${base_url}${username}`);
+
+        
+        
+        if (response.status === 404) {
+            seterror("user ot found");
+            setuserdata(null);
             setloading(false);
-            console.log(data);
-            setuserdata(data);
+            return;
         }
+        const data = await response.json();
+        setuserdata(data);
+        setloading(false);
+        console.log(data);
+
+
 
     }
 
