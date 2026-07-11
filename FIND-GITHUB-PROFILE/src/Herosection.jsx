@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./Herosection.css"
 function Herosection() {
     let base_url = "https://api.github.com/users/"
@@ -6,14 +6,28 @@ function Herosection() {
     const [userdata, setuserdata] = useState(null);
     const [loading, setloading] = useState(false);
     const [error, seterror] = useState("");
+    const [popup,setpopup]=useState(false);
+    const clearref=useRef(null);
 
+    
     function usernamechange(event) {
         setusername(event.target.value)
     }
+
+function close(){
+    setpopup(false);
+    seterror("");
+}
+
+function clear(){
+    clearref.current.value="";
+}
+
     const display = async () => {
 
         if (username == "") {
             seterror("please enter a github username");
+            setpopup(true)
             return;
         }
         setloading(true);
@@ -26,6 +40,7 @@ function Herosection() {
 
         if (response.status === 404) {
             seterror("user ot found");
+            setpopup(true);
             setuserdata(null);
             setloading(false);
             return;
@@ -42,19 +57,21 @@ function Herosection() {
     return (
         <>
             <section className="homepage">
-                <div className="overlay">
+
+               {popup && <div className="overlay">
                     <div className="user-msg">
-                        <p>{error}hello</p>
-                        <button>close</button>
+                        <p>{error}</p>
+                        <button onClick={close}>close</button>
                     </div>
 
-                </div>
+                </div> } 
 
 
 
                 <div className="input-box">
-                    <input onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                    <button onClick={display}>{loading ? "loading..." : "SEARCH"}</button>
+                    <input ref={clearref} onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
+                    <button onClick={display}>{loading ? "loading..." : "SEARCH"}</button> 
+                    <button onClick={clear}>X</button>
                     <p>{error}</p>
                 </div>
 
