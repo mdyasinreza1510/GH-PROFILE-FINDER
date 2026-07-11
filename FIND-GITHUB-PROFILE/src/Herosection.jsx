@@ -22,8 +22,8 @@ function Herosection() {
 
         const response = await fetch(`${base_url}${username}`);
 
-        
-        
+
+
         if (response.status === 404) {
             seterror("user ot found");
             setuserdata(null);
@@ -42,12 +42,20 @@ function Herosection() {
     return (
         <>
             <section className="homepage">
+                <div className="overlay">
+                    <div className="user-msg">
+                        <p>{error}hello</p>
+                        <button>close</button>
+                    </div>
+
+                </div>
 
 
 
                 <div className="input-box">
                     <input onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                    <button onClick={display}>{loading? "loading...": "SEARCH"}</button>
+                    <button onClick={display}>{loading ? "loading..." : "SEARCH"}</button>
+                    <p>{error}</p>
                 </div>
 
 
