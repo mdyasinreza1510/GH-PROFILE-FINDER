@@ -47,7 +47,7 @@ function Herosection() {
 
                 <div className="input-box">
                     <input onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                    <button onClick={display}>SEARCH</button>
+                    <button onClick={display}>{loading? "loading...": "SEARCH"}</button>
                 </div>
 
 
