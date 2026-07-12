@@ -1,29 +1,31 @@
 import { useRef, useState } from "react";
 import "./Herosection.css"
+import { RiGitRepositoryCommitsLine } from "react-icons/ri";
+
 function Herosection() {
     let base_url = "https://api.github.com/users/"
     const [username, setusername] = useState("");
     const [userdata, setuserdata] = useState(null);
     const [loading, setloading] = useState(false);
     const [error, seterror] = useState("");
-    const [popup,setpopup]=useState(false);
-    const clearref=useRef(null);
-    const [repos,setrepos]=useState([]);
+    const [popup, setpopup] = useState(false);
+    const clearref = useRef(null);
+    const [repos, setrepos] = useState([]);
 
 
     function usernamechange(event) {
         setusername(event.target.value)
     }
 
-function close(){
-    setpopup(false);
-    seterror("");
-}
+    function close() {
+        setpopup(false);
+        seterror("");
+    }
 
-function clear(){
-    clearref.current.value="";
-    setusername(event.target.value)
-}
+    function clear() {
+        clearref.current.value = "";
+        setusername(event.target.value)
+    }
 
     const display = async () => {
 
@@ -31,7 +33,7 @@ function clear(){
             seterror("enter a github username !!");
             setuserdata(null);
             setpopup(true)
-           
+
             return;
         }
         setloading(true);
@@ -39,7 +41,7 @@ function clear(){
 
 
         const response = await fetch(`${base_url}${username}`);
-        const response2= await fetch (`${base_url}${username}/repos`)
+        const response2 = await fetch(`${base_url}${username}/repos`)
 
 
 
@@ -52,11 +54,12 @@ function clear(){
             return;
         }
         const data = await response.json();
-        const data2= await response2.json();
-        console.log(data2);
+        const data2 = await response2.json();
         setuserdata(data);
+        setrepos(data2);
+        console.log(data2);
         setloading(false);
-        
+
 
 
 
@@ -66,19 +69,19 @@ function clear(){
         <>
             <section className="homepage">
 
-               {popup && <div className="overlay">
+                {popup && <div className="overlay">
                     <div className="user-msg">
                         <p >{error}</p>
                         <button className="close-btn" onClick={close}>close</button>
                     </div>
 
-                </div> } 
+                </div>}
 
 
 
                 <div className="input-box">
                     <input ref={clearref} onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                    <button onClick={display}>{loading ? "loading..." : "SEARCH"}</button> 
+                    <button onClick={display}>{loading ? "loading..." : "SEARCH"}</button>
                     <button onClick={clear}>X</button>
                     <p>{error}</p>
                 </div>
@@ -114,16 +117,29 @@ function clear(){
                             </div>
 
                             <div className="repo-main-box">
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
-                                <div className="repobox"></div>
+                                {repos.map((repo) => (
+                                    <div className="repobox" key={repo.id}>
+
+                                        <div className="info1">
+
+                                            <div className="logo"><RiGitRepositoryCommitsLine />
+                                            </div>
+
+                                            <div className="texts">
+                                            <h3>{repo.name}</h3>
+                                            <p>{repo.description}</p>
+                                            <p>{repo.language}</p>
+                                            </div>
+                                           </div>
+
+                                    </div>
+
+
+
+                                ))}
+
+
+
                             </div>
                         </div>
                     </div>

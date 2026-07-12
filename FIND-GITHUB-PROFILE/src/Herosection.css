@@ -1,14 +1,16 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scrollbar-width: none;
 
 }
-body{
+
+body {
     background-color: #132440;
 }
-.overlay{
+
+.overlay {
     background-color: transparent;
     backdrop-filter: blur(5px);
     display: flex;
@@ -19,7 +21,8 @@ body{
     position: absolute;
     z-index: 1;
 }
-.user-msg{
+
+.user-msg {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -27,7 +30,7 @@ body{
     justify-content: center;
     border-radius: 20px;
     gap: 20px;
-    font-size:16px;
+    font-size: 16px;
     color: white;
     font-weight: 600;
     font-family: Verdana;
@@ -35,7 +38,8 @@ body{
     width: 350px;
     background-color: #16476A;
 }
-.close-btn{
+
+.close-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +93,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.pfp img{
+
+.pfp img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -118,8 +123,9 @@ body{
     height: 100%;
     border: 2px solid white;
 }
-.d1{
-  
+
+.d1 {
+
     height: 40px;
     width: 100%;
     padding: 0px 10px 0px 10px;
@@ -127,7 +133,8 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.repo-main-box{
+
+.repo-main-box {
     box-sizing: border-box;
     overflow: scroll;
     padding: 10px;
@@ -136,12 +143,31 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-   
+
     gap: 15px;
 }
-.repobox{ 
+
+.repobox {
     flex-shrink: 0;
     height: 115px;
     width: 100%;
     background-color: green;
+}
+
+.logo {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: red;
+    width: 60%;
+    height: 100%;
 }
