@@ -20,6 +20,7 @@ function Herosection() {
     function close() {
         setpopup(false);
         seterror("");
+        
     }
 
     function clear() {
@@ -33,6 +34,7 @@ function Herosection() {
             seterror("enter a github username !!");
             setuserdata(null);
             setpopup(true)
+            setrepos([]);
 
             return;
         }
@@ -50,6 +52,7 @@ function Herosection() {
             setusername("");
             setpopup(true);
             setuserdata(null);
+            setrepos(null);
             setloading(false);
             return;
         }
@@ -122,15 +125,15 @@ function Herosection() {
 
                                         <div className="info1">
 
-                                            <div className="logo"><RiGitRepositoryCommitsLine />
+                                            <div className="logo"><RiGitRepositoryCommitsLine size={40} color="#3C0753" />
                                             </div>
 
                                             <div className="texts">
-                                            <h3>{repo.name}</h3>
-                                            <p>{repo.description}</p>
-                                            <p>{repo.language}</p>
+                                                <h3 style={{color:"white"}}>{repo.name}</h3>
+                                                <p style={{color:"rgb(228, 228, 228)"}}>{repo.description}</p>
+                                                <p style={{color:"rgb(195, 195, 195)"}}>{repo.language}</p>
                                             </div>
-                                           </div>
+                                        </div>
 
                                     </div>
 
