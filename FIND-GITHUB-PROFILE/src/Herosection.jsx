@@ -8,6 +8,7 @@ function Herosection() {
     const [error, seterror] = useState("");
     const [popup,setpopup]=useState(false);
     const clearref=useRef(null);
+    const [repos,setrepos]=useState([]);
 
 
     function usernamechange(event) {
@@ -28,6 +29,7 @@ function clear(){
 
         if (username == "") {
             seterror("enter a github username !!");
+            setuserdata(null);
             setpopup(true)
            
             return;
@@ -37,6 +39,7 @@ function clear(){
 
 
         const response = await fetch(`${base_url}${username}`);
+        const response2= await fetch (`${base_url}${username}/repos`)
 
 
 
@@ -49,9 +52,11 @@ function clear(){
             return;
         }
         const data = await response.json();
+        const data2= await response2.json();
+        console.log(data2);
         setuserdata(data);
         setloading(false);
-        console.log(data);
+        
 
 
 
@@ -109,6 +114,11 @@ function clear(){
                             </div>
 
                             <div className="repo-main-box">
+                                <div className="repobox"></div>
+                                <div className="repobox"></div>
+                                <div className="repobox"></div>
+                                <div className="repobox"></div>
+                                <div className="repobox"></div>
                                 <div className="repobox"></div>
                                 <div className="repobox"></div>
                                 <div className="repobox"></div>
