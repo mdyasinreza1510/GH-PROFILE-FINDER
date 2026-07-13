@@ -51,8 +51,8 @@ function Herosection() {
             seterror("user ot found");
             setusername("");
             setpopup(true);
-            setuserdata(null);
-            setrepos(null);
+        
+            setrepos([]);
             setloading(false);
             return;
         }
