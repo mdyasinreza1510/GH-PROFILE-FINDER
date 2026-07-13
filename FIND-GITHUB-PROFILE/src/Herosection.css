@@ -219,8 +219,13 @@ body {
 }
 .lastupdated{
     background-color: blue;
-    padding-left: 40px;
-    padding-right: 5px;
     height: 40px;
     width: 100%;
+}
+.lastupdated span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+
 }

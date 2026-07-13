@@ -24,7 +24,7 @@ function Herosection() {
     function close() {
         setpopup(false);
         seterror("");
-        
+
     }
 
     function clear() {
@@ -55,7 +55,7 @@ function Herosection() {
             seterror("user ot found");
             setusername("");
             setpopup(true);
-        
+
             setrepos([]);
             setloading(false);
             return;
@@ -133,21 +133,24 @@ function Herosection() {
                                             </div>
 
                                             <div className="texts">
-                                                <h3 style={{color:"white"}}>{repo.name}</h3>
-                                                <p style={{color:"rgb(228, 228, 228)"}}>{repo.description}</p>
-                                                <p style={{color:"rgb(195, 195, 195)"}}>{repo.language}</p>
+                                                <h3 style={{ color: "white" }}>{repo.name}</h3>
+                                                <p style={{ color: "rgb(228, 228, 228)" }}>{repo.description}</p>
+                                                <p style={{ color: "rgb(195, 195, 195)" }}>{repo.language}</p>
                                             </div>
                                         </div>
 
                                         <div className="info2">
                                             <div className=" stars-box">
-                                                <span className="sp" htmlFor=""><FaRegStar/> {repo.stargazers_count
-}</span>
-                                               
-                                                <span className="sp" htmlFor=""><IoIosGitNetwork/>haui</span>
+                                                <span className="sp" htmlFor=""><FaRegStar /> {repo.stargazers_count
+                                                }</span>
+
+                                                <span className="sp" htmlFor=""><IoIosGitNetwork />{repo.forks_count
+                                                }</span>
                                             </div>
                                             <div className="lastupdated">
-                                                <span >hi</span>
+                                                <span >Last Updated
+                                                    <br />
+                                                    {new Date(repo.updated_at).toLocaleDateString()}</span>
                                             </div>
                                         </div>
 
