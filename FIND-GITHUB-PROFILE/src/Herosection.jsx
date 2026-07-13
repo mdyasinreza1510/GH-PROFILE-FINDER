@@ -4,7 +4,7 @@ import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import { FaRegStar } from "react-icons/fa";
 import { IoIosGitNetwork } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
-
+import Lightfall from "./Components/Lightfall.jsx";
 
 function Herosection() {
     let base_url = "https://api.github.com/users/"
@@ -75,6 +75,31 @@ function Herosection() {
     return (
         <>
             <section className="homepage">
+
+
+                <div className="bg" style={{ width: '100%', height: '100vh', position: 'relative' }}>
+                    <Lightfall
+                    
+                        colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
+                        backgroundColor="#0A29FF"
+                        speed={0.5}
+                        streakCount={2}
+                        streakWidth={1}
+                        streakLength={1}
+                        glow={1}
+                        density={0.6}
+                        twinkle={1}
+                        zoom={3}
+                        backgroundGlow={0.5}
+                        opacity={1}
+                        mouseInteraction
+                        mouseStrength={0.5}
+                        mouseRadius={1}
+                        color1="#A6C8FF"
+                        color2="#5227FF"
+                        color3="#FF9FFC"
+                    />
+                </div>
 
                 {popup && <div className="overlay">
                     <div className="user-msg">
