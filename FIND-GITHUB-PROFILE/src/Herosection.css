@@ -129,7 +129,7 @@ body {
 }
 
 .d1 {
-color: white;
+    color: white;
     height: 40px;
     width: 100%;
     padding: 0px 30px 0px 20px;
@@ -151,6 +151,8 @@ color: white;
 }
 
 .repobox {
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
     padding: 0px 10px 0px 10px;
     flex-shrink: 0;
@@ -179,7 +181,18 @@ color: white;
     display: flex;
     align-items: center;
     gap: 13px;
-    /* background-color: red; */
+    background-color: red;
     width: 60%;
     height: 100%;
+}
+
+.texts {
+    background-color: red;
+
+}
+
+.info2 {
+    height: 100%;
+    width: 40%;
+    background-color: green;
 }

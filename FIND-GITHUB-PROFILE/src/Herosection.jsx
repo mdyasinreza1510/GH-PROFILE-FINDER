@@ -1,6 +1,10 @@
 import { useRef, useState } from "react";
 import "./Herosection.css"
 import { RiGitRepositoryCommitsLine } from "react-icons/ri";
+import { FaRegStar } from "react-icons/fa";
+import { IoIosGitNetwork } from "react-icons/io";
+import { FiUsers } from "react-icons/fi";
+
 
 function Herosection() {
     let base_url = "https://api.github.com/users/"
@@ -134,6 +138,8 @@ function Herosection() {
                                                 <p style={{color:"rgb(195, 195, 195)"}}>{repo.language}</p>
                                             </div>
                                         </div>
+
+                                        <div className="info2"></div>
 
                                     </div>
 
