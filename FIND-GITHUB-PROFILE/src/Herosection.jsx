@@ -139,7 +139,17 @@ function Herosection() {
                                             </div>
                                         </div>
 
-                                        <div className="info2"></div>
+                                        <div className="info2">
+                                            <div className=" stars-box">
+                                                <span className="sp" htmlFor=""><FaRegStar/> {repo.stargazers_count
+}</span>
+                                               
+                                                <span className="sp" htmlFor=""><IoIosGitNetwork/>haui</span>
+                                            </div>
+                                            <div className="lastupdated">
+                                                <span >hi</span>
+                                            </div>
+                                        </div>
 
                                     </div>
 
