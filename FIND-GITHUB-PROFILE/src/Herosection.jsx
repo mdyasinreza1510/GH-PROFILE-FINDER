@@ -52,7 +52,7 @@ function Herosection() {
 
 
         if (response.status === 404) {
-            seterror("user ot found");
+            seterror("user not found");
             setusername("");
             setpopup(true);
 
@@ -77,7 +77,7 @@ function Herosection() {
             <section className="homepage">
 
 
-                <div className="bg" style={{ width: '100%', height: '100vh', position: 'relative' }}>
+                <div className="bg" >
                     <Lightfall
                     
                         colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
@@ -101,7 +101,8 @@ function Herosection() {
                     />
                 </div>
 
-                {popup && <div className="overlay">
+  <div className="hero">
+                    {popup && <div className="overlay">
                     <div className="user-msg">
                         <p >{error}</p>
                         <button className="close-btn" onClick={close}>close</button>
@@ -194,6 +195,9 @@ function Herosection() {
 
 
                 </div>
+                </div>
+
+                
 
 
             </section>

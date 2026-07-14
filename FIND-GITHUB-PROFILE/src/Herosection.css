@@ -3,21 +3,39 @@
     margin: 0;
     box-sizing: border-box;
     scrollbar-width: none;
-     font-family: "Geist", sans-serif;
+    font-family: "Geist", sans-serif;
 
 }
 
 
-.bg{
-     position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-.homepage{
-      position: relative;
+.bg {
+    height: 100vh;
     width: 100%;
-    min-height: 100vh;
+    position: absolute;
+    z-index: 0;
+
+
+}
+
+.homepage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+}
+
+.hero {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    padding: 10px;
+
 }
 
 .overlay {
@@ -30,6 +48,17 @@
     width: 100%;
     position: absolute;
     z-index: 10;
+    
+    
+}
+@keyframes popup {
+    from{
+        transform: scale(0.5);
+    }
+    to{
+         transform: scale(1);
+    }
+    
 }
 
 .user-msg {
@@ -47,6 +76,8 @@
     height: 150px;
     width: 350px;
     background-color: #16476A;
+    animation: popup 0.3s ease;
+    transition: all 0.3 ;
 }
 
 .close-btn {
@@ -72,10 +103,11 @@
 
 .main-box {
     display: flex;
-    /* border: 2px solid red; */
-    height: 500px;
+    border: 2px solid red;
+    height: 100vh;
     gap: 10px;
     margin-top: 10px;
+
 }
 
 
@@ -85,7 +117,7 @@
     width: 20%;
     border: 1px solid white;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
     backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
@@ -119,6 +151,8 @@
     gap: 12px;
     height: 100%;
     width: 80%;
+    background: transparent;
+    backdrop-filter: blur(5px);
 }
 
 .b1 {
@@ -152,7 +186,7 @@
     box-sizing: border-box;
     overflow: scroll;
     padding: 0px 10px 0px 10px;
-    /* background-color: greenyellow; */
+    background: transparent;
     height: 100%;
     width: 100%;
     display: flex;
@@ -169,14 +203,14 @@
     height: 115px;
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.116);
+    background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
 }
 
 .logo {
-    background-color: rgba(255, 255, 255, 0.175);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 
     height: 50px;
     width: 50px;
@@ -206,35 +240,39 @@
     justify-content: center;
     gap: 5px;
     align-items: center;
-    
+
     /* background-color: green; */
 }
-.stars-box{
+
+.stars-box {
     /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     height: 40px;
-    
-    
+
+
 
 }
-.sp{
+
+.sp {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3px;
 }
-.lastupdated{
+
+.lastupdated {
     /* background-color: blue; */
     height: 40px;
     width: 100%;
 }
-.lastupdated span{
+
+.lastupdated span {
     display: flex;
     align-items: center;
     justify-content: center;
- 
+
 
 }
