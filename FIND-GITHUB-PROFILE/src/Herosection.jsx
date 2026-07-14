@@ -4,6 +4,8 @@ import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import { FaRegStar } from "react-icons/fa";
 import { IoIosGitNetwork } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
+import { BsSearch } from "react-icons/bs";
+
 import Lightfall from "./Components/Lightfall.jsx";
 
 function Herosection() {
@@ -114,8 +116,9 @@ function Herosection() {
 
                 <div className="input-box">
                     <input ref={clearref} onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                    <button onClick={display}>{loading ? "loading..." : "SEARCH"}</button>
-                    <button onClick={clear}>X</button>
+                    <button className="srch-btn" onClick={display}>{loading ? "loading..." : <BsSearch />
+}</button>
+                    <button className="cancel-btn" onClick={clear}>X</button>
                     <p>{error}</p>
                 </div>
 
