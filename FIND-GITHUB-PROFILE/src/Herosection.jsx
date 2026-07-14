@@ -81,7 +81,7 @@ function Herosection() {
 
                 <div className="bg" >
                     <Lightfall
-                    
+
                         colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
                         backgroundColor="#0A29FF"
                         speed={0.5}
@@ -103,104 +103,104 @@ function Herosection() {
                     />
                 </div>
 
-  <div className="hero">
+                <div className="hero">
                     {popup && <div className="overlay">
-                    <div className="user-msg">
-                        <p >{error}</p>
-                        <button className="close-btn" onClick={close}>close</button>
-                    </div>
+                        <div className="user-msg">
+                            <p >{error}</p>
+                            <button className="close-btn" onClick={close}>close</button>
+                        </div>
 
-                </div>}
-
-
-
-                <div className="input-box">
-                    <input ref={clearref} onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                    <button className="srch-btn" onClick={display}>{loading ? "loading..." : <BsSearch />
-}</button>
-                    <button className="cancel-btn" onClick={clear}>X</button>
-                    <p>{error}</p>
-                </div>
+                    </div>}
 
 
-                <div className="main-box" >
-                    <div className="cards" id="left">
-                        <div className="pfp"><img src={userdata?.avatar_url} alt="pfp" /></div>
 
-                        <span>@{userdata?.login}</span>
-
-                        <span>{userdata?.bio}</span>
-                        <div className="details">my details</div>
-                        <span><a href={userdata?.html_url} target="_blank">view on github</a></span>
+                    <div className="input-box">
+                        <input ref={clearref} onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
+                        <button className="srch-btn" onClick={display}>{loading ? "loading..." : <BsSearch />
+                        }</button>
+                        <button className="cancel-btn" onClick={clear}>X</button>
+                        <p>{error}</p>
                     </div>
 
 
+                    <div className="main-box" >
+                        <div className="cards" id="left">
+                            <div className="pfp"><img src={userdata?.avatar_url} alt="pfp" /></div>
 
-                    <div className="cards" id="right">
-                        <div className="b1">
-                            <div className="mini-boxes" id="r1"></div>
-                            <div className="mini-boxes" id="r2"></div>
-                            <div className="mini-boxes" id="r3"></div>
-                            <div className="mini-boxes" id="r4"></div>
+                            <span>@{userdata?.login}</span>
+
+                            <span>{userdata?.bio}</span>
+                            <div className="details">my details</div>
+                            <span><a href={userdata?.html_url} target="_blank">view on github</a></span>
                         </div>
 
 
 
-                        <div className="b2">
-                            <div className="d1">
-                                <span>repositories</span>
-                                <button>view all</button>
+                        <div className="cards" id="right">
+                            <div className="b1">
+                                <div className="mini-boxes" id="r1"></div>
+                                <div className="mini-boxes" id="r2"></div>
+                                <div className="mini-boxes" id="r3"></div>
+                                <div className="mini-boxes" id="r4"></div>
                             </div>
 
-                            <div className="repo-main-box">
-                                {repos.map((repo) => (
-                                    <div className="repobox" key={repo.id}>
 
-                                        <div className="info1">
 
-                                            <div className="logo"><RiGitRepositoryCommitsLine size={40} color="#3C0753" />
+                            <div className="b2">
+                                <div className="d1">
+                                    <span>repositories</span>
+                                    <button>view all</button>
+                                </div>
+
+                                <div className="repo-main-box">
+                                    {repos.map((repo) => (
+                                        <div className="repobox" key={repo.id}>
+
+                                            <div className="info1">
+
+                                                <div className="logo"><RiGitRepositoryCommitsLine size={40} color="#3C0753" />
+                                                </div>
+
+                                                <div className="texts">
+                                                    <h3 style={{ color: "white" }}>{repo.name}</h3>
+                                                    <p style={{ color: "rgb(228, 228, 228)" }}>{repo.description}</p>
+                                                    <p style={{ color: "rgb(195, 195, 195)" }}>{repo.language}</p>
+                                                </div>
                                             </div>
 
-                                            <div className="texts">
-                                                <h3 style={{ color: "white" }}>{repo.name}</h3>
-                                                <p style={{ color: "rgb(228, 228, 228)" }}>{repo.description}</p>
-                                                <p style={{ color: "rgb(195, 195, 195)" }}>{repo.language}</p>
+                                            <div className="info2">
+                                                <div className=" stars-box">
+                                                    <span className="sp" htmlFor=""><FaRegStar /> {repo.stargazers_count
+                                                    }</span>
+
+                                                    <span className="sp" htmlFor=""><IoIosGitNetwork />{repo.forks_count
+                                                    }</span>
+                                                </div>
+                                                <div className="lastupdated">
+                                                    <span >Last Updated
+                                                        <br />
+                                                        {new Date(repo.updated_at).toLocaleDateString()}</span>
+                                                </div>
                                             </div>
+
                                         </div>
 
-                                        <div className="info2">
-                                            <div className=" stars-box">
-                                                <span className="sp" htmlFor=""><FaRegStar /> {repo.stargazers_count
-                                                }</span>
 
-                                                <span className="sp" htmlFor=""><IoIosGitNetwork />{repo.forks_count
-                                                }</span>
-                                            </div>
-                                            <div className="lastupdated">
-                                                <span >Last Updated
-                                                    <br />
-                                                    {new Date(repo.updated_at).toLocaleDateString()}</span>
-                                            </div>
-                                        </div>
 
-                                    </div>
+                                    ))}
 
 
 
-                                ))}
-
-
-
+                                </div>
                             </div>
                         </div>
+
+
+
                     </div>
-
-
-
-                </div>
                 </div>
 
-                
+
 
 
             </section>
