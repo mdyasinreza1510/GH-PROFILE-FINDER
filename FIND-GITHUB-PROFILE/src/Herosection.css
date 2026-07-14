@@ -36,7 +36,7 @@
     width: 100%;
     height: 100vh;
     z-index: 1;
-    background-color: blue;
+    /* background-color: blue; */
     padding: 10px;
     flex-shrink: 0;
 }
@@ -90,7 +90,7 @@
     align-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
-    background-color: #BF092F;
+    /* background-color: #BF092F; */
     font-weight: 550;
     width: 140px;
     height: 30px;
@@ -105,6 +105,8 @@
     position: relative;
     border: 2px solid white;
     height: 100px;
+    width: 100%;
+    gap: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +127,7 @@
     width: 20px;
     position: absolute;
     right: 39.5%;
-    top: 35%;
+    top: 38%;
     background: none;
     border: none;
     font-weight: 900;
@@ -134,7 +136,11 @@
 
 .srch-btn {
     height: 40px;
-    width: 100px;
+    width: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: none;
     border: none;
     border-radius: 15px;
@@ -144,7 +150,7 @@
 .main-box {
     display: flex;
     flex-shrink: 0;
-    background-color: red;
+    /* background-color: red; */
     height: 80%;
     width: 100%;
     gap: 10px;
@@ -212,7 +218,7 @@
     gap: 5px;
     height: 100%;
     border: 2px solid white;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .d1 {

@@ -116,10 +116,10 @@ function Herosection() {
 
                     <div className="input-box">
                         <input ref={clearref} onChange={usernamechange} type="text" placeholder="Enter username" value={username} />
-                        <button className="srch-btn" onClick={display}>{loading ? "loading..." : <BsSearch />
+                        <button className="srch-btn" onClick={display}>{loading ? "loading..." : <BsSearch size={22} />
                         }</button>
                         <button className="cancel-btn" onClick={clear}>X</button>
-                        <p>{error}</p>
+                        
                     </div>
 
 
