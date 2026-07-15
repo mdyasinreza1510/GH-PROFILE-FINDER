@@ -9,7 +9,7 @@ import { BsSearch } from "react-icons/bs";
 import Lightfall from "./Components/Lightfall.jsx";
 
 function Herosection() {
-    let base_url = "https://api.github.com/users/"
+    let base_url = "https://api.github.com/users"
     const [username, setusername] = useState("");
     const [userdata, setuserdata] = useState(null);
     const [loading, setloading] = useState(false);
@@ -48,8 +48,8 @@ function Herosection() {
         seterror("");
 
 
-        const response = await fetch(`${base_url}${username}`);
-        const response2 = await fetch(`${base_url}${username}/repos`)
+        const response = await fetch(`${base_url}/${username}`);
+        const response2 = await fetch(`${base_url}/${username}/repos`)
 
 
 
@@ -120,7 +120,7 @@ function Herosection() {
                         <button className="srch-btn" onClick={display}>{loading ? "loading..." : <BsSearch size={26} />
                         }</button>
                         <button className="cancel-btn" onClick={clear}>X</button>
-                        
+
                     </div>
 
 
@@ -149,8 +149,9 @@ function Herosection() {
 
                             <div className="b2">
                                 <div className="d1">
-                                    <h5>Repositories </h5> 
-                                   <h5>View All</h5>
+                                    <h5>Repositories {userdata?.public_repos
+                                    } </h5>
+                                    <a href="`{${userdata?.html_url}?tab=repositories`" target="_blank"> <h5>View All</h5> </a>
                                 </div>
 
                                 <div className="repo-main-box">
