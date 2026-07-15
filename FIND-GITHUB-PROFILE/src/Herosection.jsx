@@ -9,7 +9,7 @@ import { BsSearch } from "react-icons/bs";
 import Lightfall from "./Components/Lightfall.jsx";
 
 function Herosection() {
-    let base_url = "https://api.github.com/users"
+    let base_url = "https://api.github.com/users/"
     const [username, setusername] = useState("");
     const [userdata, setuserdata] = useState(null);
     const [loading, setloading] = useState(false);
@@ -17,6 +17,7 @@ function Herosection() {
     const [popup, setpopup] = useState(false);
     const clearref = useRef(null);
     const [repos, setrepos] = useState([]);
+
 
 
     function usernamechange(event) {
@@ -48,8 +49,8 @@ function Herosection() {
         seterror("");
 
 
-        const response = await fetch(`${base_url}/${username}`);
-        const response2 = await fetch(`${base_url}/${username}/repos`)
+        const response = await fetch(`${base_url}${username}`);
+        const response2 = await fetch(`${base_url}${username}/repos`)
 
 
 
@@ -70,10 +71,8 @@ function Herosection() {
         console.log(data);
         setloading(false);
 
-
-
-
     }
+    
 
     return (
         <>
@@ -151,11 +150,12 @@ function Herosection() {
                                 <div className="d1">
                                     <h5>Repositories {userdata?.public_repos
                                     } </h5>
-                                    <a href="`{${userdata?.html_url}?tab=repositories`" target="_blank"> <h5>View All</h5> </a>
+
                                 </div>
 
                                 <div className="repo-main-box">
                                     {repos.map((repo) => (
+                                        
                                         <div className="repobox" key={repo.id}>
 
                                             <div className="info1">
@@ -164,9 +164,10 @@ function Herosection() {
                                                 </div>
 
                                                 <div className="texts">
-                                                    <h3 style={{ color: "white" }}>{repo.name}</h3>
-                                                    <p style={{ color: "rgb(228, 228, 228)" }}>{repo.description}</p>
-                                                    <p style={{ color: "rgb(195, 195, 195)" }}>{repo.language}</p>
+                                                    <a href={repo.svn_url
+                                                    }><h3 style={{ color: "white" }}>{repo.name}</h3> </a>
+                                                    <p style={{ color: "rgb(228, 228, 228)" }}>hi everyone </p>
+                                                    <p style={{ color: "rgb(195, 195, 195)", fontWeight:"700" }}>{repo.language}</p>
                                                 </div>
                                             </div>
 
