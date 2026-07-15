@@ -36,21 +36,21 @@
     width: 100%;
     height: 100vh;
     z-index: 1;
-    /* background-color: blue; */
+    background-color: transparent;
     padding: 10px;
     flex-shrink: 0;
 }
 
 .overlay {
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
     position: absolute;
-    z-index: 10;
+    z-index: 1000;
 
 
 }
@@ -103,7 +103,9 @@
 
 .input-box {
     position: relative;
-    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
     height: 100px;
     width: 100%;
     gap: 10px;
@@ -111,9 +113,11 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    
 }
 
 .input-box input {
+    background-color: none;
     height: 40px;
     width: 400px;
     outline: none;
@@ -125,18 +129,20 @@
 .cancel-btn {
     height: 20px;
     width: 20px;
+    color: black;
     position: absolute;
     right: 39.5%;
-    top: 38%;
+    top: 41%;
     background: none;
     border: none;
-    font-weight: 900;
+    font-weight: 700;
     font-size: large;
 }
 
 .srch-btn {
     height: 40px;
     width: 40px;
+    color: white;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -150,7 +156,7 @@
 .main-box {
     display: flex;
     flex-shrink: 0;
-    /* background-color: red; */
+    background-color:transparent;
     height: 80%;
     width: 100%;
     gap: 10px;
@@ -163,10 +169,10 @@
 #left {
     height: 100%;
     width: 20%;
-    border: 1px solid white;
+
     border-radius: 10px;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,14 +205,16 @@
     gap: 12px;
     height: 100%;
     width: 80%;
-    background: transparent;
-    backdrop-filter: blur(5px);
+    background: none;
+    
 }
 
 .b1 {
-    border: 2px solid white;
+
     border-radius: 10px;
     height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .b2 {
@@ -217,7 +225,9 @@
     flex-direction: column;
     gap: 5px;
     height: 100%;
-    border: 2px solid white;
+   
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     /* background-color: green; */
 }
 
@@ -229,6 +239,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 2px solid red;
 }
 
 .repo-main-box {
