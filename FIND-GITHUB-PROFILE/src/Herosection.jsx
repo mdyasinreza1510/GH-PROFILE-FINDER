@@ -67,6 +67,7 @@ function Herosection() {
         setuserdata(data);
         setrepos(data2);
         console.log(data2);
+        console.log(data);
         setloading(false);
 
 
@@ -148,8 +149,8 @@ function Herosection() {
 
                             <div className="b2">
                                 <div className="d1">
-                                    <span>repositories</span>
-                                    <button>view all</button>
+                                    <h5>Repositories </h5> 
+                                   <h5>View All</h5>
                                 </div>
 
                                 <div className="repo-main-box">

@@ -263,12 +263,12 @@
     height: 115px;
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
 }
 
 .logo {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     backdrop-filter: blur(10px);
 
