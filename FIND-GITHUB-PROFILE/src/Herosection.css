@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scrollbar-width: none;
     font-family: "Geist", sans-serif;
+    text-decoration: none;
 
 }
 
@@ -257,9 +258,13 @@
     height: 40px;
     width: 130px;
 }
-.labels{
-color: white;
-font-weight: 700;
+
+.label {
+    color: white;
+    font-weight: 700;
+    overflow: scroll;
+    width: 120px;
+    text-align: end;
 }
 
 #view {

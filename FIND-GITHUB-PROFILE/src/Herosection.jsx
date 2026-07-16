@@ -139,17 +139,17 @@ function Herosection() {
                             
                             <div className="details">
                                 <div className="user-details">
-                                    <span className="lcwj"><FaLocationDot/> LOCATION</span> <label className="labels" >{userdata?.location}</label>
+                                    <span className="lcwj"><FaLocationDot /> LOCATION</span> <span className="label" >{userdata?.location}</span>
                                 </div> 
                                 <div className="user-details">
-                                    <span className="lcwj"><BsBuildingsFill/> COMPANY</span> <label className="labels" >{userdata?.company}</label>
+                                    <span className="lcwj"><BsBuildingsFill /> COMPANY</span> <span className="label" >{userdata?.company}</span>
                                 </div> 
 
                                 <div className="user-details">
-                                    <span className="lcwj"><FaLink/> WEBSITE</span> <label className="labels" >{userdata?.location}</label>
+                                    <span className="lcwj"><FaLink /> WEBSITE</span> <span style={{fontSize:"small", color:"white"} } className="label" ><a href={userdata?.blog}target="_blank">@{username}</a></span>
                                 </div> 
                                 <div className="user-details">
-                                    <span className="lcwj"><SlCalender/> JOINED</span> <label className="labels" >{userdata?.location}</label>
+                                    <span className="lcwj"><SlCalender /> JOINED</span> <span className="label" >{userdata?.location}</span>
                                 </div> 
                                 
 
