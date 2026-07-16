@@ -113,7 +113,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    
+
 }
 
 .input-box input {
@@ -156,7 +156,7 @@
 .main-box {
     display: flex;
     flex-shrink: 0;
-    background-color:transparent;
+    background-color: transparent;
     height: 80%;
     width: 100%;
     gap: 10px;
@@ -175,10 +175,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
     box-sizing: border-box;
     padding: 10px;
-   gap: 5px;
+
 }
 
 .pfp {
@@ -196,29 +196,78 @@
     width: 100%;
     border-radius: 50%;
 }
-#bio{
-    background-color: red;
-    height: 120px;
+
+#name {
+    font-size: larger;
+    margin-top: 5px;
+
+    color: white;
+    font-weight: 700;
+}
+
+#user-name {
+    margin-bottom: 5px;
+    font-size: small;
+    color: rgb(175, 175, 175);
+    font-weight: 600;
+
+}
+
+#bio {
+    color: white;
+    height: 110px;
     text-align: start;
     overflow: scroll;
     padding: 4px;
     flex-shrink: 0;
 }
-.details{
-    background-color: blue;
-    height: 300px;
-    width:100%;
+
+.details {
+    /* background-color: blue; */
+    height: 270px;
+    width: 100%;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-shrink: 0;
+    margin-bottom: 15px;
 }
-.user-details{
-    
+
+.user-details {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    height: 50px;
+    border-bottom: 1px solid rgb(181, 181, 181);
+    padding-right: 10px;
+
+
 }
-#view{
+
+.lcwj {
+    color: rgb(193, 193, 193);
+    font-weight: 500;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    /* background-color: green; */
+    height: 40px;
+    width: 130px;
+}
+.labels{
+color: white;
+font-weight: 700;
+}
+
+#view {
     background-color: red;
     width: 80%;
     height: 30px;
 }
+
 #right {
     box-sizing: border-box;
     display: flex;
@@ -227,7 +276,7 @@
     height: 100%;
     width: 80%;
     background: none;
-    
+
 }
 
 .b1 {
@@ -246,7 +295,7 @@
     flex-direction: column;
     gap: 5px;
     height: 100%;
-   
+
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     /* background-color: green; */
@@ -300,11 +349,12 @@
     align-items: center;
     justify-content: center;
 }
-.texts a{
+
+.texts a {
     text-decoration: none;
 }
 
-.description{
+.description {
     font-weight: 400;
     font-size: 13px;
 

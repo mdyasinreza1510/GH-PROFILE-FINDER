@@ -5,6 +5,11 @@ import { FaRegStar } from "react-icons/fa";
 import { IoIosGitNetwork } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
 import { BsSearch } from "react-icons/bs";
+import { FaLocationDot } from "react-icons/fa6";
+import { BsBuildingsFill } from "react-icons/bs";
+import { FaLink } from "react-icons/fa6";
+import { SlCalender } from "react-icons/sl";
+
 
 import Lightfall from "./Components/Lightfall.jsx";
 
@@ -126,17 +131,30 @@ function Herosection() {
                     <div className="main-box" >
                         <div className="cards" id="left">
                             <div className="pfp"><img src={userdata?.avatar_url} alt="pfp" /></div>
-
+                            <span id="name">{userdata?.name}</span>
                             <span id="user-name">@{userdata?.login}</span>
 
                             <span id="bio">{userdata?.bio}</span>
                             
                             
                             <div className="details">
-                                <div className="user-details"></div>
-                                 <div className="user-details"></div>
-                                  <div className="user-details"></div>
-                                   <div className="user-details"></div>
+                                <div className="user-details">
+                                    <span className="lcwj"><FaLocationDot/> LOCATION</span> <label className="labels" >{userdata?.location}</label>
+                                </div> 
+                                <div className="user-details">
+                                    <span className="lcwj"><BsBuildingsFill/> COMPANY</span> <label className="labels" >{userdata?.company}</label>
+                                </div> 
+
+                                <div className="user-details">
+                                    <span className="lcwj"><FaLink/> WEBSITE</span> <label className="labels" >{userdata?.location}</label>
+                                </div> 
+                                <div className="user-details">
+                                    <span className="lcwj"><SlCalender/> JOINED</span> <label className="labels" >{userdata?.location}</label>
+                                </div> 
+                                
+
+
+                                 
 
                             </div>
 
