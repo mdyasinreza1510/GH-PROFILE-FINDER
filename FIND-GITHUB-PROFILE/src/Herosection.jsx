@@ -127,11 +127,21 @@ function Herosection() {
                         <div className="cards" id="left">
                             <div className="pfp"><img src={userdata?.avatar_url} alt="pfp" /></div>
 
-                            <span>@{userdata?.login}</span>
+                            <span id="user-name">@{userdata?.login}</span>
 
-                            <span>{userdata?.bio}</span>
-                            <div className="details">my details</div>
-                            <span><a href={userdata?.html_url} target="_blank">view on github</a></span>
+                            <span id="bio">{userdata?.bio}</span>
+                            
+                            
+                            <div className="details">
+                                <div className="user-details"></div>
+                                 <div className="user-details"></div>
+                                  <div className="user-details"></div>
+                                   <div className="user-details"></div>
+
+                            </div>
+
+
+                            <span id="view"><a href={userdata?.html_url} target="_blank">view on github</a></span>
                         </div>
 
 
