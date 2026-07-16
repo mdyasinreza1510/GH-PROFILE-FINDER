@@ -169,7 +169,6 @@
 #left {
     height: 100%;
     width: 20%;
-
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -182,8 +181,8 @@
 }
 
 .pfp {
-    height: 100px;
-    width: 100px;
+    height: 140px;
+    width: 140px;
     border-radius: 50%;
     border: 2px solid red;
     box-sizing: border-box;
@@ -282,8 +281,15 @@
 .texts a{
     text-decoration: none;
 }
-.texts p{
-    font-weight: 300;
+
+.description{
+    font-weight: 400;
+    font-size: 13px;
+
+    width: 200px;
+    height: 15px;
+    text-align: start;
+    overflow: scroll;
 }
 
 .info1 {

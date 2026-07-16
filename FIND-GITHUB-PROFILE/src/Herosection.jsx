@@ -166,7 +166,7 @@ function Herosection() {
                                                 <div className="texts">
                                                     <a href={repo.svn_url
                                                     }><h3 style={{ color: "white" }}>{repo.name}</h3> </a>
-                                                    <p style={{ color: "rgb(228, 228, 228)" }}>hi everyone </p>
+                                                    <p className="description" style={{ color: "rgb(50, 50, 50)" }}> </p>
                                                     <p style={{ color: "rgb(195, 195, 195)", fontWeight:"700" }}>{repo.language}</p>
                                                 </div>
                                             </div>
