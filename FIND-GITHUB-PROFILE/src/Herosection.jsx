@@ -20,6 +20,7 @@ function Herosection() {
     const [loading, setloading] = useState(false);
     const [error, seterror] = useState("");
     const [popup, setpopup] = useState(false);
+    const [result,setresult]=useState(false)
     const clearref = useRef(null);
     const [repos, setrepos] = useState([]);
 
@@ -50,9 +51,11 @@ function Herosection() {
             setuserdata(null);
             setpopup(true)
             setrepos([]);
+            setresult(false);
 
             return;
         }
+
         setloading(true);
         seterror("");
 
@@ -66,11 +69,14 @@ function Herosection() {
             seterror("user not found");
             setusername("");
             setpopup(true);
-
+            setresult(false);
             setrepos([]);
             setloading(false);
+            setresult(false);
             return;
         }
+
+
         const data = await response.json();
         const data2 = await response2.json();
         setuserdata(data);
@@ -78,6 +84,7 @@ function Herosection() {
         console.log(data2);
         console.log(data);
         setloading(false);
+        setresult(true);
 
     }
 
@@ -130,8 +137,7 @@ function Herosection() {
 
                     </div>
 
-
-                    <div className="main-box" >
+                    {result && <div className="main-box" >
                         <div className="cards" id="left">
                             <div className="pfp"><img src={userdata?.avatar_url} alt="pfp" /></div>
                             <span id="name">{userdata?.name}</span>
@@ -168,24 +174,33 @@ function Herosection() {
 
 
                         <div className="cards" id="right">
+
                             <div className="b1">
                                 <div className="mini-boxes" id="r1">
                                     <FiUsers size={25} />
                                     <span className="nums"> {userdata?.followers}</span>
                                     <p>FOLLOWERS</p>
                                 </div>
+                                <div className="divider"></div>
                                 <div className="mini-boxes" id="r2">
                                     <FiUsers size={25} />
                                     <span className="nums"> {userdata?.following}</span>
                                     <p>FOLLOWING</p>
 
                                 </div>
+
+                                <div className="divider"></div>
+
+
                                 <div className="mini-boxes" id="r2">
                                     <RiGitRepositoryCommitsLine size={25} />
                                     <span className="nums"> {userdata?.public_repos}</span>
                                     <p>REPOSITORIES</p>
 
                                 </div>
+
+                                <div className="divider"></div>
+
                                 <div className="mini-boxes" id="r2">
                                     <FaRegStar size={25} />
                                     <span className="nums">{totalStars}</span>
@@ -251,7 +266,8 @@ function Herosection() {
 
 
 
-                    </div>
+                    </div>}
+
                 </div>
 
 
