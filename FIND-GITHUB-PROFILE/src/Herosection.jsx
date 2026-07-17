@@ -9,9 +9,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsBuildingsFill } from "react-icons/bs";
 import { FaLink } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
-
-
-import Lightfall from "./Components/Lightfall.jsx";
 import Ferrofluid from "./Components/Ferrofluid.jsx";
 
 
