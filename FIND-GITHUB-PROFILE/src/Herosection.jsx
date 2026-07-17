@@ -77,7 +77,7 @@ function Herosection() {
         setloading(false);
 
     }
-    
+
 
     return (
         <>
@@ -135,41 +135,61 @@ function Herosection() {
                             <span id="user-name">@{userdata?.login}</span>
 
                             <span id="bio">{userdata?.bio}</span>
-                            
-                            
+
+
                             <div className="details">
                                 <div className="user-details">
                                     <span className="lcwj"><FaLocationDot /> LOCATION</span> <span className="label" >{userdata?.location}</span>
-                                </div> 
+                                </div>
                                 <div className="user-details">
                                     <span className="lcwj"><BsBuildingsFill /> COMPANY</span> <span className="label" >{userdata?.company}</span>
-                                </div> 
+                                </div>
 
                                 <div className="user-details">
-                                    <span className="lcwj"><FaLink /> WEBSITE</span> <span style={{fontSize:"small", color:"white"} } className="label" ><a href={userdata?.blog}target="_blank">@{username}</a></span>
-                                </div> 
+                                    <span className="lcwj"><FaLink /> WEBSITE</span> <span className="label" ><a href={userdata?.blog}>@{username}</a></span>
+                                </div>
                                 <div className="user-details">
-                                    <span className="lcwj"><SlCalender /> JOINED</span> <span className="label" >{userdata?.location}</span>
-                                </div> 
-                                
+                                    <span className="lcwj"><SlCalender /> JOINED</span> <span className="label" >{new Date(userdata?.created_at).toLocaleDateString()}</span>
+                                </div>
 
 
-                                 
+
+
 
                             </div>
 
 
-                            <span id="view"><a href={userdata?.html_url} target="_blank">view on github</a></span>
+                            <span id="view"><a href={userdata?.html_url} target="_blank">VIEW ON GITHUB</a></span>
                         </div>
 
 
 
                         <div className="cards" id="right">
                             <div className="b1">
-                                <div className="mini-boxes" id="r1"></div>
-                                <div className="mini-boxes" id="r2"></div>
-                                <div className="mini-boxes" id="r3"></div>
-                                <div className="mini-boxes" id="r4"></div>
+                                <div className="mini-boxes" id="r1">
+                                    <FiUsers size={25} />
+                                    <span className="nums"> {userdata?.followers}</span>
+                                    <p>FOLLOWERS</p>
+                                </div>
+                                <div className="mini-boxes" id="r2">
+                                    <FiUsers size={25} />
+                                    <span className="nums"> {userdata?.following}</span>
+                                    <p>FOLLOWING</p>
+
+                                </div>
+                                <div className="mini-boxes" id="r2">
+                                    <RiGitRepositoryCommitsLine size={25} />
+                                    <span className="nums"> {userdata?.public_repos}</span>
+                                    <p>REPOSITORIES</p>
+
+                                </div>
+                                <div className="mini-boxes" id="r2">
+                                    <FiUsers size={25} />
+                                    <span className="nums"> {userdata?.following}</span>
+                                    <p>FOLLOWING</p>
+
+                                </div>
+                                
                             </div>
 
 
@@ -183,7 +203,7 @@ function Herosection() {
 
                                 <div className="repo-main-box">
                                     {repos.map((repo) => (
-                                        
+
                                         <div className="repobox" key={repo.id}>
 
                                             <div className="info1">
@@ -195,7 +215,7 @@ function Herosection() {
                                                     <a href={repo.svn_url
                                                     }><h3 style={{ color: "white" }}>{repo.name}</h3> </a>
                                                     <p className="description" style={{ color: "rgb(50, 50, 50)" }}> </p>
-                                                    <p style={{ color: "rgb(195, 195, 195)", fontWeight:"700" }}>{repo.language}</p>
+                                                    <p style={{ color: "rgb(195, 195, 195)", fontWeight: "700" }}>{repo.language}</p>
                                                 </div>
                                             </div>
 

@@ -260,17 +260,32 @@
 }
 
 .label {
+    /* background-color: red; */
     color: white;
     font-weight: 700;
     overflow: scroll;
-    width: 120px;
+    width: 100px;
     text-align: end;
 }
 
+.label a {
+    color: rgb(0, 0, 255);
+    font-size: small;
+}
+
 #view {
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
-    height: 30px;
+    height: 35px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid rgb(181, 181, 181);
+}
+
+#view a {
+    color: white
 }
 
 #right {
@@ -285,12 +300,32 @@
 }
 
 .b1 {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 10px;
     height: 100px;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: red;
     backdrop-filter: blur(10px);
 }
+
+.mini-boxes {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+}
+.nums{
+    font-size: larger;
+    font-weight: 800;
+}
+
 
 .b2 {
     box-sizing: border-box;
