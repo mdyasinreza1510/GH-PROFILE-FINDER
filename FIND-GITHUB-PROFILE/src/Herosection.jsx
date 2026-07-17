@@ -12,6 +12,8 @@ import { SlCalender } from "react-icons/sl";
 
 
 import Lightfall from "./Components/Lightfall.jsx";
+import Ferrofluid from "./Components/Ferrofluid.jsx";
+
 
 function Herosection() {
     let base_url = "https://api.github.com/users/"
@@ -20,7 +22,7 @@ function Herosection() {
     const [loading, setloading] = useState(false);
     const [error, seterror] = useState("");
     const [popup, setpopup] = useState(false);
-    const [result,setresult]=useState(false)
+    const [result, setresult] = useState(false)
     const clearref = useRef(null);
     const [repos, setrepos] = useState([]);
 
@@ -95,26 +97,21 @@ function Herosection() {
 
 
                 <div className="bg" >
-                    <Lightfall
-
-                        colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
-                        backgroundColor="#0A29FF"
+                    <Ferrofluid
+                        colors={["#ffffff", "#ffffff", "#ffffff"]}
                         speed={0.5}
-                        streakCount={2}
-                        streakWidth={1}
-                        streakLength={1}
-                        glow={1}
-                        density={0.6}
-                        twinkle={1}
-                        zoom={3}
-                        backgroundGlow={0.5}
+                        scale={1.6}
+                        turbulence={1}
+                        fluidity={0.1}
+                        rimWidth={0.2}
+                        sharpness={2.5}
+                        shimmer={1.5}
+                        glow={2}
+                        flowDirection="down"
                         opacity={1}
                         mouseInteraction
-                        mouseStrength={0.5}
-                        mouseRadius={1}
-                        color1="#A6C8FF"
-                        color2="#5227FF"
-                        color3="#FF9FFC"
+                        mouseStrength={1}
+                        mouseRadius={0.35}
                     />
                 </div>
 
