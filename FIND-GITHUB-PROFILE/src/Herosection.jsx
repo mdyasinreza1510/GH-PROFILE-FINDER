@@ -23,6 +23,9 @@ function Herosection() {
     const clearref = useRef(null);
     const [repos, setrepos] = useState([]);
 
+    const totalStars = repos.reduce((total, repo) => {
+        return total + repo.stargazers_count;
+    }, 0);
 
 
     function usernamechange(event) {
@@ -184,12 +187,12 @@ function Herosection() {
 
                                 </div>
                                 <div className="mini-boxes" id="r2">
-                                    <FiUsers size={25} />
-                                    <span className="nums"> {userdata?.following}</span>
-                                    <p>FOLLOWING</p>
+                                    <FaRegStar size={25} />
+                                    <span className="nums">{totalStars}</span>
+                                    <p>STARS</p>
 
                                 </div>
-                                
+
                             </div>
 
 
